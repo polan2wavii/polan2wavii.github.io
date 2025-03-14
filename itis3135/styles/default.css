@@ -1,3 +1,8 @@
 body {
-    background: linear-gradient(90deg, rgb(15, 172 ,255), rgb(160, 0, 255));
+    background: linear-gradient(to right, rgb(0, 172, 255), rgb(0, 102, 204));
+    background-color: #07ace9; /* Fallback color in case the gradient isn't supported */
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF; 
 }
