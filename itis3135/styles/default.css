@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(90deg, rgb(0, 172, 255), rgb(0, 102, 204));
+    background: linear-gradient(90deg, #020024 0%, #090979 35%, #00d4ff 100%);
     background-color: #07ace9;
     min-height: 100vh;
     margin: 0;
@@ -8,7 +8,7 @@ body {
 }
     
 header {
-    background: linear-gradient(160deg, #1e90ff, #100f0f);
+    background: linear-gradient(45deg, #0a79e7, #043a80);
     position: fixed;
     top: 0;
     width: 100%;
