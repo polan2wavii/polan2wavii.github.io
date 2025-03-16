@@ -1,21 +1,22 @@
 body {
     background: linear-gradient(to right, rgb(0, 172, 255), rgb(0, 102, 204));
-    background-color: #07ace9; /* Fallback color in case the gradient isn't supported */
+    background-color: #07ace9;
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
-
+    
 header {
-    background-color: #333;
+    background: linear-gradient(160deg, #1e90ff, #100f0f);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
-
+    
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -24,14 +25,20 @@ header {
     align-items: center;
     padding: 1rem 2rem;
 }
-
+    
 .logo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
 }
-
+    
+.logo a:hover {
+    color: #f0f0f0;
+}
+    
 .nav-links {
     list-style: none;
     margin: 0;
@@ -39,11 +46,11 @@ header {
     display: flex;
     align-items: center;
 }
-
+    
 .nav-links li {
     margin-left: 2rem;
 }
-
+    
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -51,28 +58,66 @@ header {
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
-
+    
 .nav-links a:hover {
-    color: #ddd;
+    color: #ffd700;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
-
+    
 a.active {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }
-
+    
 main {
     padding: 20px;
-    margin-top: 80px; /* To prevent content from hiding under fixed header */
-    min-height: calc(100vh - 140px); /* Adjust based on header/footer height */
+    margin-top: 80px;
+    min-height: calc(100vh - 140px);
+    }
+    
+#photo {
+    height: auto;
+    width: 200px;
+    border-radius: 50px;
 }
-
+    
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
+}
+    
+.container {
+    padding: 20px;
+}
+    
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+    
+.bio-info {
+    flex: 1;
+    color: #FFFFFF;
+}
+    
+.bio-info p {
+    margin: 0;
+}
+    
+@media (max-width: 600px) {
+    
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #photo {
+        width: 150px;
+        margin-bottom: 10px;
+    }
 }
