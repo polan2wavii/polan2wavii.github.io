@@ -69,3 +69,21 @@ footer p {
     font-size: 0.9em;
     color: #666;
 }
+
+ul {
+    list-style-type: disc;
+    text-align: left; /* Keeps bullets aligned left */
+    display: inline-block; /* Centers the list on the page */
+    margin: 0;
+    padding-left: 40px; /* Standard indent for bullets */
+}
+
+li {
+    margin-bottom: 15px; /* Space between bullet points */
+}
+
+li strong {
+    font-family: "Verdana", sans-serif;
+    font-size: 1.8em;
+    color: #34495e;
+}
