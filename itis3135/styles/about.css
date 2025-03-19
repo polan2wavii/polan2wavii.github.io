@@ -1,0 +1,351 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with a peaceful nature theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f7f0; /* Light earthy beige */
+    color: #4a5e3b; /* Deep forest green for text */
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #a8c1a0; /* Soft sage green */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 3px solid #d9e6d2; /* Light green border */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #3b4a2e; /* Darker green for contrast */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and icon */
+}
+
+.header-icon {
+    width: 50px; /* Smaller size for icon-like appearance */
+    height: 50px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensures image fits nicely */
+    border: 2px solid #d9e6d2; /* Subtle border */
+}
+
+/* Main section styling */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+#section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #d9e6d2, #f5f7f0); /* Light green to beige gradient */
+    border-radius: 10px;
+    position: relative; /* For rabbit positioning */
+}
+
+#section h2 {
+    font-size: 2rem;
+    color: #6b8760; /* Muted green */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#section p {
+    font-size: 1.1rem;
+    color: #4a5e3b;
+    padding: 1.5rem;
+    background: none; /* Remove the white background */
+    border-radius: 0; /* Remove rounding since it’s now part of the section */
+    box-shadow: none; /* Remove shadow since it’s handled by the section */
+}
+
+/* Rabbit Animation */
+.rabbit {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem; /* Center it and add spacing below */
+    animation: hop 1.5s infinite ease-in-out; /* Hopping animation */
+}
+
+.rabbit-body {
+    width: 40px;
+    height: 30px;
+    background: #a8c1a0; /* Sage green */
+    border-radius: 50% 50% 20% 20%;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.rabbit-ear {
+    width: 10px;
+    height: 20px;
+    background: #a8c1a0;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: 5px;
+}
+
+.rabbit-ear.left {
+    left: 15px;
+    transform: rotate(-20deg);
+}
+
+.rabbit-ear.right {
+    left: 30px;
+    transform: rotate(20deg);
+}
+
+.rabbit-eye {
+    width: 4px;
+    height: 4px;
+    background: #4a5e3b; /* Dark green */
+    border-radius: 50%;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.rabbit-leg {
+    width: 10px;
+    height: 15px;
+    background: #a8c1a0;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+.rabbit-leg.left {
+    left: 10px;
+}
+
+.rabbit-leg.right {
+    left: 25px;
+}
+
+/* Hopping Animation */
+@keyframes hop {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Hop up */
+    }
+    100% {
+        transform: translateY(0); /* Back down */
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #a8c1a0, #6b8760); /* Chlorophyll green gradient */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden; /* Contain the leaf animation */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #fff; /* White for contrast against gradient */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #f5f7f0; /* Light beige for readability */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contact ul li {
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0.8rem 0;
+}
+
+#contact ul li strong {
+    color: #d9e6d2; /* Light green for emphasis */
+}
+
+#contact a {
+    color: #f5f7f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #fff; /* Brighten on hover */
+}
+
+/* Leaf Animation */
+@keyframes falling-leaves {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.leaf {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('images/leaf.png') no-repeat center; /* Replace with your leaf image */
+    background-size: contain;
+    opacity: 0.6;
+    animation: falling-leaves 8s linear infinite;
+}
+
+/* Multiple leaves with delays for a raining effect */
+.leaf:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.leaf:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.leaf:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.leaf:nth-child(4) {
+    left: 70%;
+    animation-delay: 6s;
+}
+
+.leaf:nth-child(5) {
+    left: 90%;
+    animation-delay: 1s;
+}
+
+/* Footer styling */
+footer {
+    background-color: #a8c1a0; /* Matching sage green */
+    padding: 1rem;
+    text-align: center;
+    color: #3b4a2e;
+    border-top: 3px solid #d9e6d2;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer em {
+    color: #6b8760; /* Muted green for slogan and certification */
+}
+
+footer a {
+    color: #4a5e3b;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #8fa587; /* Lighter green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    #section h2 {
+        font-size: 1.5rem;
+    }
+
+    #section p {
+        font-size: 1rem;
+    }
+
+    .rabbit {
+        width: 50px;
+        height: 50px;
+    }
+
+    .rabbit-body {
+        width: 30px;
+        height: 20px;
+        top: 15px;
+        left: 10px;
+    }
+
+    .rabbit-ear {
+        width: 8px;
+        height: 15px;
+        top: 5px;
+    }
+
+    .rabbit-ear.left {
+        left: 12px;
+    }
+
+    .rabbit-ear.right {
+        left: 25px;
+    }
+
+    .rabbit-eye {
+        width: 3px;
+        height: 3px;
+        top: 20px;
+        left: 25px;
+    }
+
+    .rabbit-leg {
+        width: 8px;
+        height: 12px;
+    }
+
+    .rabbit-leg.left {
+        left: 8px;
+    }
+
+    .rabbit-leg.right {
+        left: 20px;
+    }
+
+    #contact h2 {
+        font-size: 1.5rem;
+    }
+
+    #contact p,
+    #contact ul li {
+        font-size: 1rem;
+    }
+}
